@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/developers")
 public class DeveloperController {
-    private Map<Integer, Developer> developers;
+    public Map<Integer, Developer> developers;
     private Taxable taxable;
 
     @Autowired
