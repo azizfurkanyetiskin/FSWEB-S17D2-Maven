@@ -1,4 +1,4 @@
-package org.example.model;
+package com.workintech.s17d2.model;
 
 public class Developer {
     private int id;
