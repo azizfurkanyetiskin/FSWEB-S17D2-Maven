@@ -4,6 +4,7 @@ import com.workintech.s17d2.model.*;
 import com.workintech.s17d2.tax.Taxable;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -38,6 +39,7 @@ public class DeveloperController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Developer addDeveloper(@RequestBody Developer developer) {
         Developer newDev = null;
         if (developer.getExperience() == Experience.JUNIOR) {
